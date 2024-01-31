@@ -1,0 +1,22 @@
+#:kivy 2.0.0
+
+<AgentVisualization>:
+    size: 20, 20
+    canvas:
+        Color:
+            rgba: 1,0,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Destination>:
+    size: 100, 100
+
+<Environment>:
+    agentVisualization: env_agent
+    startPosition: 100, 100
+
+    AgentVisualization:
+        id: env_agent
+        center: self.parent.startPosition
+
